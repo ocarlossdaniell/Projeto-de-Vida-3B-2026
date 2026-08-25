@@ -39,7 +39,7 @@ body {
 
 
 /* =========================
-   TEIAS DE FUNDO
+   TEIAS
 ========================= */
 
 .web {
@@ -317,7 +317,7 @@ h1 span {
 
 
 /* =========================
-   SUMMARY
+   BOTÕES
 ========================= */
 
 summary {
@@ -555,7 +555,7 @@ summary::marker {
 
 
 /* =========================
-   FINANÇAS
+   ORGANIZAÇÃO FINANCEIRA
 ========================= */
 
 .money-grid {
@@ -645,7 +645,7 @@ summary::marker {
 
 
 /* =========================
-   META CELULAR
+   META
 ========================= */
 
 .phone-goal {
@@ -851,7 +851,7 @@ footer p {
 
 
 /* =========================
-   RESPONSIVIDADE
+   CELULAR
 ========================= */
 
 @media (max-width: 650px) {

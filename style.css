@@ -1,12 +1,12 @@
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;600;700;800&display=swap');
 
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 
@@ -16,104 +16,225 @@ body {
 
     background:
         radial-gradient(
-            circle at top right,
-            #12345a 0,
-            transparent 35%
+            circle at 15% 15%,
+            rgba(210, 20, 35, .25),
+            transparent 25%
         ),
-        linear-gradient(
-            135deg,
-            #080b10,
-            #111820
-        );
 
-    color: #e8edf3;
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(20, 70, 150, .3),
+            transparent 30%
+        ),
+
+        #080b10;
+
+    color: #e9edf2;
 
     display: flex;
 
     justify-content: center;
+
     align-items: center;
 
-    padding: 50px 20px;
+    padding: 55px 20px;
+
+    position: relative;
+
+    overflow-x: hidden;
 }
 
 
-.decoracao {
+/* TEIAS */
+
+.teia {
 
     position: fixed;
 
-    top: 25px;
-    left: 30px;
+    color: #b9c0c8;
 
-    color: #3d9cff;
+    opacity: .12;
 
-    font-size: 24px;
+    font-size: 190px;
 
-    opacity: .7;
+    pointer-events: none;
+
 }
 
 
+.teia-esquerda {
+
+    left: -70px;
+
+    top: -55px;
+
+}
+
+
+.teia-direita {
+
+    right: -70px;
+
+    bottom: -55px;
+
+    transform: rotate(180deg);
+
+}
+
+
+.aranha {
+
+    position: fixed;
+
+    right: 8%;
+
+    top: 8%;
+
+    font-size: 40px;
+
+    opacity: .2;
+
+    transform: rotate(10deg);
+
+}
+
+
+
+/* PAINEL */
+
 .painel {
 
-    width: 780px;
+    width: 800px;
 
     max-width: 100%;
 
-    background: #121820;
+    background: #10151c;
 
-    border: 1px solid #263443;
+    border: 2px solid #303943;
 
     border-radius: 18px;
 
     padding: 45px;
 
     box-shadow:
-        0 25px 60px rgba(0, 0, 0, .45);
+        0 30px 70px rgba(0,0,0,.6);
+
+    position: relative;
+
+    overflow: hidden;
 }
 
 
+/* LINHA VERMELHA NO TOPO */
+
+.painel::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #b51224,
+            #e52b3e,
+            #1455a0
+        );
+
+}
+
+
+/* CABEÇALHO */
+
 .cabecalho {
 
-    border-bottom: 1px solid #263443;
+    text-align: center;
 
     padding-bottom: 30px;
 
     margin-bottom: 25px;
+
+    border-bottom: 1px solid #303943;
+
+}
+
+
+.logo {
+
+    width: 70px;
+
+    height: 70px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #c4172b,
+            #7e0c18
+        );
+
+    border: 3px solid #e52b3e;
+
+    box-shadow:
+        0 0 25px rgba(220,30,50,.25);
+
+    font-size: 32px;
+
 }
 
 
 .tag {
 
-    color: #4aa8ff;
+    color: #e52b3e;
 
     font-size: 11px;
 
     font-weight: 800;
 
-    letter-spacing: 3px;
+    letter-spacing: 4px;
 }
 
 
 h1 {
 
-    font-size: 42px;
+    font-size: 44px;
 
-    margin-top: 10px;
+    margin-top: 8px;
 
-    color: #f1f5f9;
+    color: #f4f6f8;
 
-    letter-spacing: -1px;
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
 }
 
 
 h1 span {
 
-    color: #3d9cff;
+    color: #e52b3e;
 }
 
 
 .cabecalho p {
 
-    color: #8493a4;
+    color: #7e8995;
 
     margin-top: 8px;
 
@@ -121,23 +242,26 @@ h1 span {
 }
 
 
+
+/* CARDS */
+
 .metas {
 
     display: flex;
 
     flex-direction: column;
 
-    gap: 10px;
+    gap: 11px;
 }
 
 
 details {
 
-    background: #171f29;
+    background: #151b23;
 
-    border: 1px solid #283746;
+    border: 1px solid #303943;
 
-    border-radius: 12px;
+    border-radius: 10px;
 
     overflow: hidden;
 
@@ -147,7 +271,10 @@ details {
 
 details:hover {
 
-    border-color: #3d9cff;
+    border-color: #d51d31;
+
+    box-shadow:
+        0 5px 20px rgba(190,20,40,.08);
 }
 
 
@@ -159,13 +286,11 @@ summary {
 
     gap: 15px;
 
-    padding: 18px;
+    padding: 17px;
 
     cursor: pointer;
 
     list-style: none;
-
-    transition: .2s;
 }
 
 
@@ -175,11 +300,11 @@ summary::-webkit-details-marker {
 }
 
 
-summary .icone {
+.icone {
 
-    width: 45px;
+    width: 47px;
 
-    height: 45px;
+    height: 47px;
 
     display: flex;
 
@@ -187,15 +312,31 @@ summary .icone {
 
     justify-content: center;
 
-    background: #202b37;
+    border-radius: 8px;
 
-    border-radius: 10px;
+    font-size: 22px;
 
-    font-size: 21px;
+    flex-shrink: 0;
 }
 
 
-summary div {
+.vermelho {
+
+    background: #35161b;
+
+    border: 1px solid #76222d;
+}
+
+
+.azul {
+
+    background: #15263a;
+
+    border: 1px solid #24517c;
+}
+
+
+.titulo-card {
 
     flex: 1;
 
@@ -205,19 +346,19 @@ summary div {
 }
 
 
-summary strong {
+.titulo-card strong {
 
-    color: #e8edf3;
+    color: #e9edf2;
 
-    font-size: 16px;
+    font-size: 17px;
 }
 
 
-summary small {
+.titulo-card small {
 
-    color: #718195;
+    color: #697785;
 
-    margin-top: 4px;
+    margin-top: 3px;
 
     font-size: 12px;
 }
@@ -225,9 +366,9 @@ summary small {
 
 summary b {
 
-    color: #4aa8ff;
+    color: #e52b3e;
 
-    font-size: 24px;
+    font-size: 25px;
 
     font-weight: 400;
 
@@ -237,15 +378,15 @@ summary b {
 
 summary:hover {
 
-    background: #1b2530;
+    background: #1a2029;
 }
 
 
 details[open] summary {
 
-    background: #1a2633;
+    background: #1b2028;
 
-    border-bottom: 1px solid #283746;
+    border-bottom: 1px solid #303943;
 }
 
 
@@ -255,11 +396,14 @@ details[open] summary b {
 }
 
 
+
+/* CONTEÚDO */
+
 .conteudo {
 
-    padding: 28px;
+    padding: 30px;
 
-    color: #9aa8b7;
+    color: #9aa6b2;
 
     line-height: 1.7;
 }
@@ -277,9 +421,9 @@ details[open] summary b {
 
 .titulo-secao > span {
 
-    color: #3d9cff;
+    color: #e52b3e;
 
-    font-size: 13px;
+    font-size: 12px;
 
     font-weight: 800;
 }
@@ -287,21 +431,24 @@ details[open] summary b {
 
 .titulo-secao h2 {
 
-    color: #f1f5f9;
+    color: #f0f3f6;
 
-    font-size: 22px;
+    font-size: 23px;
 
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 }
 
 
 .titulo-secao p {
 
-    color: #7f8d9d;
+    color: #7c8895;
 
     font-size: 14px;
 }
 
+
+
+/* OBJETIVOS */
 
 .objetivo {
 
@@ -309,15 +456,15 @@ details[open] summary b {
 
     gap: 15px;
 
-    padding: 18px 0;
+    padding: 20px 0;
 
-    border-top: 1px solid #263443;
+    border-top: 1px solid #303943;
 }
 
 
 .numero {
 
-    color: #3d9cff;
+    color: #e52b3e;
 
     font-weight: 800;
 
@@ -327,63 +474,58 @@ details[open] summary b {
 
 .objetivo h3 {
 
-    color: #dce4ec;
+    color: #dce2e8;
 
-    font-size: 16px;
+    font-size: 17px;
 
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 
 .objetivo p {
 
-    color: #8291a1;
+    color: #84909d;
 
     font-size: 14px;
 }
 
 
-.status {
 
-    margin-top: 20px;
+/* FRASE */
 
-    display: inline-flex;
+.frase {
 
-    gap: 10px;
+    margin-top: 22px;
 
-    align-items: center;
+    padding: 17px;
 
-    background: #142a20;
+    text-align: center;
 
-    border: 1px solid #205238;
+    background:
+        linear-gradient(
+            90deg,
+            #261419,
+            #171d25
+        );
 
-    color: #5fd18a;
+    border-left: 3px solid #e52b3e;
 
-    padding: 9px 13px;
+    color: #c6cdd5;
 
-    border-radius: 7px;
-
-    font-size: 12px;
-
-    font-weight: 700;
+    font-weight: 600;
 }
 
 
-.status span {
 
-    color: #6d7d8e;
-
-    font-size: 10px;
-}
-
+/* UEM */
 
 .info {
 
-    background: #18232e;
+    background: #151f2a;
 
-    border-left: 3px solid #3d9cff;
+    border-left: 3px solid #2367a5;
 
-    padding: 15px 18px;
+    padding: 16px 18px;
 
     margin-bottom: 12px;
 }
@@ -399,13 +541,13 @@ details[open] summary b {
 
     display: block;
 
-    color: #65778a;
+    color: #667584;
 
     font-size: 10px;
 
     font-weight: 800;
 
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 
     margin-bottom: 5px;
 }
@@ -413,7 +555,9 @@ details[open] summary b {
 
 .info strong {
 
-    color: #dce4ec;
+    color: #dce7f0;
+
+    font-size: 17px;
 }
 
 
@@ -429,24 +573,35 @@ details[open] summary b {
 
 .mini-info {
 
-    background: #18232e;
+    background: #151f2a;
 
-    padding: 16px;
+    border: 1px solid #293b4d;
 
-    border: 1px solid #263443;
-
+    padding: 17px;
 }
 
 
 .mini-info strong {
 
-    color: #4aa8ff;
+    display: block;
+
+    color: #4598df;
+
+    margin-bottom: 5px;
+}
+
+
+.mini-info p {
+
+    font-size: 13px;
+
+    color: #778695;
 }
 
 
 .subtitulo {
 
-    color: #cbd5df;
+    color: #d4dbe2;
 
     font-size: 14px;
 
@@ -466,18 +621,29 @@ details[open] summary b {
 
 .datas div {
 
-    background: #18232e;
+    background: #181e26;
 
-    border: 1px solid #263443;
+    border: 1px solid #303943;
 
-    padding: 16px;
+    padding: 17px;
 }
 
 
 .datas strong {
 
-    color: #e5edf5;
+    display: block;
 
+    color: #f0f3f6;
+
+    margin-bottom: 4px;
+}
+
+
+.datas p {
+
+    color: #707d8b;
+
+    font-size: 12px;
 }
 
 
@@ -485,11 +651,16 @@ details[open] summary b {
 
     margin-top: 20px;
 
-    padding: 17px;
+    padding: 18px;
 
-    background: #12263a;
+    background:
+        linear-gradient(
+            135deg,
+            #32151a,
+            #191d24
+        );
 
-    border: 1px solid #214a70;
+    border: 1px solid #64232d;
 }
 
 
@@ -497,7 +668,7 @@ details[open] summary b {
 
     display: block;
 
-    color: #4aa8ff;
+    color: #e52b3e;
 
     font-size: 10px;
 
@@ -511,10 +682,12 @@ details[open] summary b {
 
 .meta-final strong {
 
-    color: #dcecff;
-
+    color: #e5e9ed;
 }
 
+
+
+/* FINANÇAS */
 
 .renda {
 
@@ -528,9 +701,9 @@ details[open] summary b {
 
 .renda div {
 
-    background: #18232e;
+    background: #151b23;
 
-    border: 1px solid #263443;
+    border: 1px solid #303943;
 
     padding: 18px;
 }
@@ -538,15 +711,15 @@ details[open] summary b {
 
 .renda strong {
 
-    color: #f1f5f9;
+    color: #f0f3f6;
 
-    font-size: 20px;
+    font-size: 21px;
 }
 
 
 .gastos {
 
-    border-top: 1px solid #263443;
+    border-top: 1px solid #303943;
 }
 
 
@@ -558,15 +731,18 @@ details[open] summary b {
 
     padding: 13px 0;
 
-    border-bottom: 1px solid #263443;
+    border-bottom: 1px solid #303943;
 }
 
 
 .gastos strong {
 
-    color: #dce4ec;
+    color: #dce2e8;
 }
 
+
+
+/* CELULAR */
 
 .celular {
 
@@ -578,13 +754,14 @@ details[open] summary b {
 
     padding: 20px;
 
-    background: linear-gradient(
-        135deg,
-        #172d42,
-        #18232e
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #172b42,
+            #181d24
+        );
 
-    border: 1px solid #28577f;
+    border: 1px solid #28557e;
 
     border-radius: 10px;
 }
@@ -592,7 +769,7 @@ details[open] summary b {
 
 .celular-icon {
 
-    font-size: 28px;
+    font-size: 30px;
 }
 
 
@@ -600,7 +777,7 @@ details[open] summary b {
 
     display: block;
 
-    color: #e4f2ff;
+    color: #e7f2fc;
 
     margin-bottom: 5px;
 }
@@ -610,13 +787,13 @@ details[open] summary b {
 
     font-size: 13px;
 
-    color: #8da0b2;
+    color: #8997a5;
 }
 
 
 .celular p b {
 
-    color: #4aa8ff;
+    color: #55a9ed;
 }
 
 
@@ -630,37 +807,51 @@ details[open] summary b {
 
     padding: 15px;
 
-    background: #1b222a;
+    background: #191f26;
 }
 
 
 .livre strong {
 
-    color: #cdd7e0;
+    color: #dce2e8;
 }
 
 
+
+/* LISTAS */
+
 .lista {
 
-    border-top: 1px solid #263443;
+    border-top: 1px solid #303943;
 }
 
 
 .lista p {
 
-    padding: 13px 0;
+    padding: 14px 0;
 
-    border-bottom: 1px solid #263443;
+    border-bottom: 1px solid #303943;
 
-    color: #9aa8b7;
+    color: #929eaa;
 
     font-size: 14px;
 }
 
 
+.lista p b {
+
+    color: #e52b3e;
+
+    margin-right: 8px;
+}
+
+
+
+/* RODAPÉ */
+
 footer {
 
-    border-top: 1px solid #263443;
+    border-top: 1px solid #303943;
 
     margin-top: 30px;
 
@@ -672,7 +863,7 @@ footer {
 
 footer span {
 
-    color: #4aa8ff;
+    color: #e52b3e;
 
     font-size: 10px;
 
@@ -684,7 +875,7 @@ footer span {
 
 footer p {
 
-    color: #657586;
+    color: #667483;
 
     font-size: 12px;
 
@@ -692,20 +883,21 @@ footer p {
 }
 
 
+
+/* CELULAR */
+
 @media (max-width: 600px) {
 
     body {
 
-        padding: 25px 12px;
+        padding: 30px 12px;
 
     }
 
 
     .painel {
 
-        padding: 25px 18px;
-
-        border-radius: 14px;
+        padding: 25px 17px;
 
     }
 
@@ -728,7 +920,14 @@ footer p {
 
     .conteudo {
 
-        padding: 20px;
+        padding: 22px 18px;
+
+    }
+
+
+    .teia {
+
+        font-size: 120px;
 
     }
 

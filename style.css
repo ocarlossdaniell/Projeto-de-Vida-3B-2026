@@ -1,473 +1,1239 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Quicksand:wght@400;500;600;700&display=swap');
 
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
 
 * {
 
-margin: 0;
-padding: 0;
+    margin: 0;
+    padding: 0;
 
-box-sizing: border-box;
-
-font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
 
 }
-
 
 
 body {
 
-min-height: 100vh;
+    min-height: 100vh;
 
-background:
+    padding: 35px 18px;
 
-linear-gradient(
-180deg,
-#dff7ff,
-#b9e8ff
-);
+    font-family: 'Quicksand', sans-serif;
 
-display: flex;
+    color: #263747;
 
-justify-content: center;
+    overflow-x: hidden;
 
-align-items: center;
 
-padding: 30px;
+    background:
 
-color: #526b80;
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(220,25,55,.25),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(20,70,170,.30),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #050d1b,
+            #0c2850,
+            #050c18
+        );
+
+}
+
+
+/* =========================
+   HOMEM-ARANHA GIGANTE
+   NO FUNDO
+========================= */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    right: -150px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 650px;
+
+    height: 650px;
+
+
+    background-image:
+
+        url("imagens/aranha-fundo.png");
+
+    background-position: center;
+
+    background-size: contain;
+
+    background-repeat: no-repeat;
+
+
+    opacity: .17;
+
+    filter: saturate(1.3);
+
+
+    pointer-events: none;
+
+    z-index: 0;
 
 }
 
 
 
-/* DECORAÇÃO */
+/* =========================
+   PADRÃO DE TEIA
+========================= */
 
-.decoracao {
+body::after {
 
-position: fixed;
+    content: "";
 
-top: 20px;
+    position: fixed;
 
-left: 0;
+    inset: 0;
 
-width: 100%;
 
-text-align: center;
+    background-image:
 
-font-size: 42px;
+        linear-gradient(
+            30deg,
+            transparent 48%,
+            rgba(255,255,255,.035) 49%,
+            transparent 50%
+        ),
 
-letter-spacing: 12px;
+        linear-gradient(
+            150deg,
+            transparent 48%,
+            rgba(255,255,255,.035) 49%,
+            transparent 50%
+        );
 
-opacity: .75;
+
+    background-size: 75px 75px;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+}
+
+
+.teia {
+
+    position: fixed;
+
+    font-size: 170px;
+
+    opacity: .07;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+}
+
+
+.teia-esquerda {
+
+    left: -90px;
+
+    top: -50px;
+
+}
+
+
+.teia-direita {
+
+    right: -90px;
+
+    bottom: -50px;
 
 }
 
 
 
-/* PRINCIPAL */
+/* =========================
+   CAIXA PRINCIPAL
+========================= */
 
 .principal {
 
-background: white;
+    position: relative;
 
-width: 680px;
+    z-index: 2;
 
-max-width: 100%;
+    width: 700px;
 
-padding: 40px;
+    max-width: 100%;
 
-border-radius: 35px;
+    margin: auto;
 
-box-shadow:
+    padding: 30px;
 
-0 15px 35px rgba(0,150,255,.25);
 
-border: 4px solid #bde8ff;
+    background: rgba(
+        250,
+        253,
+        255,
+        .98
+    );
+
+
+    border-radius: 30px;
+
+
+    border: 5px solid #d71936;
+
+
+    box-shadow:
+
+        0 25px 70px rgba(0,0,0,.60),
+
+        0 0 0 3px #123d75;
+
+
+    overflow: hidden;
 
 }
 
 
 
-/* TÍTULO */
+/* barra superior */
+
+.principal::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    height: 10px;
+
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #b90f29,
+            #ef233c,
+            #164b91,
+            #071d42
+        );
+
+}
+
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.hero {
+
+    min-height: 230px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 30px 18px 5px;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.hero-text {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 62%;
+
+}
+
+
+.mini-titulo {
+
+    color: #d71936;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+}
+
 
 h1 {
 
-text-align: center;
+    font-family: 'Bangers', cursive;
 
-color: #2196f3;
+    font-size: 55px;
 
-margin-bottom: 8px;
+    line-height: .95;
 
-font-size: 38px;
+    letter-spacing: 2px;
 
-}
+    color: #123d75;
 
-
-.subtitulo {
-
-text-align: center;
-
-color: #7190a6;
-
-margin-bottom: 35px;
-
-font-size: 14px;
+    margin: 8px 0;
 
 }
 
 
+h1 span {
 
-/* CARDS */
+    color: #d71936;
+
+}
+
+
+.hero p {
+
+    color: #668096;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+
+/* Homem-Aranha pixel */
+
+.aranha-pixel {
+
+    position: absolute;
+
+    right: -10px;
+
+    bottom: -90px;
+
+
+    width: 320px;
+
+    height: 320px;
+
+
+    object-fit: contain;
+
+
+    filter:
+
+        drop-shadow(
+            0 12px 12px rgba(0,0,0,.20)
+        );
+
+}
+
+
+
+/* =========================
+   TEIA DECORATIVA
+========================= */
+
+.linha-teia {
+
+    color: #aebfce;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    letter-spacing: 7px;
+
+    margin:
+
+        3px
+
+        0
+
+        22px;
+
+}
+
+
+
+/* =========================
+   CARDS
+========================= */
 
 .objetivos {
 
-display: flex;
+    display: flex;
 
-flex-direction: column;
+    flex-direction: column;
 
-gap: 18px;
+    gap: 16px;
 
 }
 
+
+details,
+.curriculo {
+
+    border-radius: 21px;
+
+    border: 3px solid #b8d8f5;
+
+    background: #eef8ff;
+
+    overflow: hidden;
+
+
+    box-shadow:
+
+        0 4px 12px rgba(
+            15,
+            67,
+            115,
+            .08
+        );
+
+}
 
 
 details {
 
-background: #effaff;
+    transition: .25s;
 
-border-radius: 25px;
+}
 
-border: 3px solid #b5e3ff;
 
-overflow: hidden;
+details:hover,
+.curriculo:hover {
 
-transition: .25s;
+    border-color: #d71936;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+
+        0 8px 20px rgba(
+            15,
+            67,
+            115,
+            .18
+        );
 
 }
 
 
 
-details:hover {
+/* =========================
+   BOTÕES DOS CARDS
+========================= */
 
-transform: translateY(-2px);
+summary,
+.curriculo {
 
-box-shadow:
+    min-height: 78px;
 
-0 5px 15px rgba(33,150,243,.12);
+    padding: 13px 17px;
 
-}
+    display: flex;
 
+    align-items: center;
 
+    gap: 14px;
 
-/* BOTÕES */
+    cursor: pointer;
 
-summary {
+    list-style: none;
 
-cursor: pointer;
-
-background: #8bd0ff;
-
-padding: 20px;
-
-color: white;
-
-font-size: 22px;
-
-font-weight: 700;
-
-list-style: none;
-
-transition: .25s;
+    text-decoration: none;
 
 }
-
 
 
 summary::-webkit-details-marker {
 
-display: none;
+    display: none;
+
+}
+
+
+.titulo-card {
+
+    flex: 1;
+
+}
+
+
+summary strong,
+.curriculo strong {
+
+    display: block;
+
+    color: #164b83;
+
+    font-size: 19px;
+
+}
+
+
+summary small,
+.curriculo small {
+
+    display: block;
+
+    color: #7892a7;
+
+    font-size: 12px;
+
+    margin-top: 2px;
+
+}
+
+
+.abrir {
+
+    color: #d71936;
+
+    font-size: 29px;
+
+    font-weight: 700;
 
 }
 
 
 
-summary::after {
-
-content: "🔵";
-
-float: right;
-
-}
-
-
-
-summary:hover {
-
-background: #55baff;
-
-}
-
-
+/* CARD ABERTO */
 
 details[open] summary {
 
-background: #2196f3;
+    background:
+
+        linear-gradient(
+            90deg,
+            #c9102e,
+            #e92a43
+        );
+
+}
+
+
+details[open] summary strong,
+details[open] summary small {
+
+    color: white;
+
+}
+
+
+details[open] .abrir {
+
+    color: white;
+
+    transform: rotate(45deg);
 
 }
 
 
 
-details[open] summary::after {
+/* =========================
+   ÍCONES
+========================= */
 
-content: "🔹";
+.icone {
+
+    width: 50px;
+
+    height: 50px;
+
+    min-width: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 15px;
+
+    font-size: 24px;
+
+}
+
+
+.vermelho {
+
+    background: #ffe5e9;
+
+    border: 2px solid #f5a6b2;
+
+}
+
+
+.azul {
+
+    background: #dceeff;
+
+    border: 2px solid #a9cff0;
 
 }
 
 
 
-/* CONTEÚDO */
+/* =========================
+   CONTEÚDO
+========================= */
 
 .conteudo {
 
-padding: 25px;
+    position: relative;
 
-line-height: 1.8;
+    padding: 25px;
 
-color: #526b80;
+    color: #536c80;
 
-animation: aparecer .25s ease;
+    line-height: 1.7;
 
-}
-
-
-
-@keyframes aparecer {
-
-from {
-
-opacity: 0;
-
-transform: translateY(-5px);
+    overflow: hidden;
 
 }
 
-to {
 
-opacity: 1;
+.numero {
 
-transform: translateY(0);
+    color: #d71936;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
 
 }
-
-}
-
 
 
 .conteudo h2 {
 
-color: #1685dd;
+    color: #15518e;
 
-margin-bottom: 12px;
+    font-size: 25px;
+
+    margin:
+
+        2px
+
+        0
+
+        9px;
 
 }
-
 
 
 .conteudo h3 {
 
-color: #2196f3;
+    color: #15518e;
 
-margin-top: 20px;
+    font-size: 17px;
 
-margin-bottom: 8px;
+    margin:
+
+        20px
+
+        0
+
+        8px;
+
+}
+
+
+.conteudo > p {
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
 
 }
 
 
 
-.conteudo p {
+/* =========================
+   ITENS
+========================= */
 
-margin-bottom: 15px;
+.item {
+
+    border-top:
+
+        1px solid #d3e5f2;
+
+    padding:
+
+        15px
+
+        0;
+
+}
+
+
+.item h3 {
+
+    margin:
+
+        0
+
+        0
+
+        4px;
+
+}
+
+
+.item p {
+
+    font-size: 13px;
 
 }
 
 
 
-.conteudo ul {
-
-padding-left: 25px;
-
-}
-
-
-
-.conteudo li {
-
-margin-bottom: 8px;
-
-}
-
-
-
-.conteudo strong {
-
-color: #0070c9;
-
-}
-
-
-
-/* DESTAQUE */
+/* =========================
+   DESTAQUES
+========================= */
 
 .destaque {
 
-background: #c9efff;
+    margin-top: 18px;
 
-padding: 16px;
+    padding: 15px;
 
-border-radius: 18px;
+    border-radius: 16px;
 
-text-align: center;
+    text-align: center;
 
-font-weight: 600;
+    font-weight: 700;
 
-color: #0070c9;
+    font-size: 13px;
 
-margin-top: 20px;
+}
+
+
+.vermelho-bg {
+
+    background: #ffe8eb;
+
+    border-left:
+
+        4px solid #d71936;
+
+    color: #a7132b;
+
+}
+
+
+.azul-bg {
+
+    background: #e1f2ff;
+
+    border-left:
+
+        4px solid #1764a8;
+
+    color: #15518e;
 
 }
 
 
 
-/* CURRÍCULO */
+/* =========================
+   IMAGENS DOS CARDS
+========================= */
+
+.imagem-conteudo {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 300px;
+
+    height: 180px;
+
+    object-fit: cover;
+
+    margin: 20px auto 0;
+
+    border-radius: 18px;
+
+    border: 3px solid white;
+
+    box-shadow:
+
+        0 8px 20px rgba(
+            20,
+            50,
+            80,
+            .20
+        );
+
+}
+
+
+
+/* =========================
+   FINANÇAS
+========================= */
+
+.financeiro {
+
+    display: grid;
+
+    grid-template-columns:
+
+        1fr 1fr;
+
+    gap: 12px;
+
+    margin: 18px 0;
+
+}
+
+
+.financeiro div {
+
+    padding: 17px;
+
+    background: white;
+
+    border:
+
+        2px solid #cce4f6;
+
+    border-radius: 15px;
+
+}
+
+
+.financeiro small {
+
+    display: block;
+
+    color: #7892a7;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.financeiro strong {
+
+    display: block;
+
+    color: #15518e;
+
+    font-size: 22px;
+
+    margin-top: 5px;
+
+}
+
+
+
+/* gastos */
+
+.gastos {
+
+    background: white;
+
+    border:
+
+        2px solid #d3e7f6;
+
+    border-radius: 15px;
+
+    padding:
+
+        4px
+
+        16px;
+
+}
+
+
+.gastos p {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 11px 0;
+
+    border-bottom:
+
+        1px solid #e2edf5;
+
+    font-size: 13px;
+
+}
+
+
+.gastos p:last-child {
+
+    border-bottom: 0;
+
+}
+
+
+.gastos b {
+
+    color: #15518e;
+
+}
+
+
+
+/* META CELULAR */
+
+.meta-celular {
+
+    margin-top: 18px;
+
+    padding: 18px;
+
+    border-radius: 17px;
+
+    color: white;
+
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #143e72,
+            #d71936
+        );
+
+
+    box-shadow:
+
+        0 8px 18px rgba(
+            30,
+            60,
+            100,
+            .18
+        );
+
+}
+
+
+.meta-celular > span {
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.meta-celular h3 {
+
+    color: white;
+
+    margin:
+
+        4px
+
+        0;
+
+}
+
+
+.meta-celular p {
+
+    font-size: 13px;
+
+}
+
+
+.meta-celular b {
+
+    color: #fff4a8;
+
+}
+
+
+
+/* =========================
+   PORTFÓLIO
+========================= */
+
+.passos {
+
+    margin-top: 15px;
+
+    border-top:
+
+        1px solid #d3e5f2;
+
+}
+
+
+.passos p {
+
+    padding: 12px 0;
+
+    border-bottom:
+
+        1px solid #d3e5f2;
+
+    font-size: 13px;
+
+}
+
+
+.passos b {
+
+    color: #d71936;
+
+    margin-right: 8px;
+
+}
+
+
+
+/* =========================
+   CURRÍCULO
+========================= */
 
 .curriculo {
 
-display: block;
+    color: #263747;
 
-text-decoration: none;
+    background:
 
-background: #8bd0ff;
+        linear-gradient(
+            90deg,
+            #fff1f3,
+            #eef8ff
+        );
 
-color: white;
 
-border: 3px solid #b5e3ff;
-
-border-radius: 25px;
-
-padding: 20px;
-
-font-size: 21px;
-
-font-weight: 700;
-
-transition: .25s;
+    transition: .25s;
 
 }
-
-
-
-.curriculo div {
-
-display: flex;
-
-align-items: center;
-
-justify-content: space-between;
-
-}
-
-
-
-.curriculo span {
-
-font-size: 28px;
-
-}
-
 
 
 .curriculo:hover {
 
-background: #2196f3;
+    background:
 
-transform: translateY(-3px);
+        linear-gradient(
+            90deg,
+            #d71936,
+            #1761a4
+        );
 
-box-shadow:
+}
 
-0 7px 18px rgba(33,150,243,.25);
+
+.curriculo:hover strong,
+.curriculo:hover small,
+.curriculo:hover .abrir {
+
+    color: white;
 
 }
 
 
 
-/* RODAPÉ */
+/* =========================
+   RODAPÉ
+========================= */
 
 footer {
 
-text-align: center;
+    text-align: center;
 
-color: #75a3c1;
+    color: #7892a7;
 
-font-size: 13px;
+    font-size: 11px;
 
-font-weight: 600;
+    font-weight: 800;
 
-margin-top: 28px;
+    letter-spacing: 2px;
+
+    margin-top: 25px;
 
 }
 
 
 
-/* CELULAR */
+/* =========================
+   CELULAR
+========================= */
 
 @media (max-width: 600px) {
 
-body {
 
-padding: 20px 12px;
+    body {
 
-}
+        padding:
 
+            18px
 
-.principal {
+            10px;
 
-padding: 25px 18px;
-
-}
+    }
 
 
-h1 {
+    body::before {
 
-font-size: 30px;
+        right: -170px;
 
-}
+        width: 500px;
 
+        height: 500px;
 
-summary {
+        opacity: .10;
 
-font-size: 18px;
-
-padding: 17px;
-
-}
+    }
 
 
-.conteudo {
+    .principal {
 
-padding: 20px;
+        padding:
 
-font-size: 14px;
+            20px
 
-}
+            15px;
+
+        border-radius: 24px;
+
+    }
 
 
-.decoracao {
+    .hero {
 
-font-size: 28px;
+        min-height: 200px;
 
-letter-spacing: 5px;
+        padding:
 
-}
+            28px
+
+            8px
+
+            0;
+
+    }
+
+
+    .hero-text {
+
+        max-width: 68%;
+
+    }
+
+
+    h1 {
+
+        font-size: 42px;
+
+    }
+
+
+    .aranha-pixel {
+
+        width: 225px;
+
+        height: 225px;
+
+        right: -35px;
+
+        bottom: -55px;
+
+    }
+
+
+    summary,
+    .curriculo {
+
+        padding:
+
+            12px;
+
+    }
+
+
+    summary strong,
+    .curriculo strong {
+
+        font-size: 16px;
+
+    }
+
+
+    .icone {
+
+        width: 44px;
+
+        height: 44px;
+
+        min-width: 44px;
+
+        font-size: 20px;
+
+    }
+
+
+    .conteudo {
+
+        padding:
+
+            20px
+
+            17px;
+
+    }
+
+
+    .financeiro {
+
+        grid-template-columns: 1fr;
+
+    }
 
 }

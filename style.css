@@ -1,17 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Quicksand:wght@400;500;600;700&display=swap');
 
 
-/* =========================
-   CONFIGURAÇÕES GERAIS
-========================= */
-
 * {
-
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
-
 }
 
 
@@ -32,7 +25,7 @@ body {
 
         radial-gradient(
             circle at 10% 10%,
-            rgba(220,25,55,.25),
+            rgba(220,25,55,.30),
             transparent 28%
         ),
 
@@ -48,14 +41,11 @@ body {
             #0c2850,
             #050c18
         );
-
 }
 
 
-/* =========================
-   HOMEM-ARANHA GIGANTE
-   NO FUNDO
-========================= */
+
+/* HOMEM-ARANHA GRANDE NO FUNDO */
 
 body::before {
 
@@ -73,9 +63,7 @@ body::before {
 
     height: 650px;
 
-
     background-image:
-
         url("imagens/aranha-fundo.png");
 
     background-position: center;
@@ -84,23 +72,16 @@ body::before {
 
     background-repeat: no-repeat;
 
-
     opacity: .17;
-
-    filter: saturate(1.3);
-
 
     pointer-events: none;
 
     z-index: 0;
-
 }
 
 
 
-/* =========================
-   PADRÃO DE TEIA
-========================= */
+/* TEIA DE FUNDO */
 
 body::after {
 
@@ -109,7 +90,6 @@ body::after {
     position: fixed;
 
     inset: 0;
-
 
     background-image:
 
@@ -127,13 +107,11 @@ body::after {
             transparent 50%
         );
 
-
     background-size: 75px 75px;
 
     pointer-events: none;
 
     z-index: 0;
-
 }
 
 
@@ -148,7 +126,6 @@ body::after {
     z-index: 0;
 
     pointer-events: none;
-
 }
 
 
@@ -157,7 +134,6 @@ body::after {
     left: -90px;
 
     top: -50px;
-
 }
 
 
@@ -166,14 +142,11 @@ body::after {
     right: -90px;
 
     bottom: -50px;
-
 }
 
 
 
-/* =========================
-   CAIXA PRINCIPAL
-========================= */
+/* CAIXA PRINCIPAL */
 
 .principal {
 
@@ -189,20 +162,11 @@ body::after {
 
     padding: 30px;
 
-
-    background: rgba(
-        250,
-        253,
-        255,
-        .98
-    );
-
+    background: rgba(250,253,255,.98);
 
     border-radius: 30px;
 
-
     border: 5px solid #d71936;
-
 
     box-shadow:
 
@@ -210,14 +174,9 @@ body::after {
 
         0 0 0 3px #123d75;
 
-
     overflow: hidden;
-
 }
 
-
-
-/* barra superior */
 
 .principal::before {
 
@@ -233,7 +192,6 @@ body::after {
 
     height: 10px;
 
-
     background:
 
         linear-gradient(
@@ -243,14 +201,11 @@ body::after {
             #164b91,
             #071d42
         );
-
 }
 
 
 
-/* =========================
-   CABEÇALHO
-========================= */
+/* CABEÇALHO */
 
 .hero {
 
@@ -269,7 +224,6 @@ body::after {
     position: relative;
 
     overflow: hidden;
-
 }
 
 
@@ -280,7 +234,6 @@ body::after {
     z-index: 2;
 
     max-width: 62%;
-
 }
 
 
@@ -293,7 +246,6 @@ body::after {
     font-weight: 800;
 
     letter-spacing: 3px;
-
 }
 
 
@@ -310,14 +262,12 @@ h1 {
     color: #123d75;
 
     margin: 8px 0;
-
 }
 
 
 h1 span {
 
     color: #d71936;
-
 }
 
 
@@ -328,12 +278,8 @@ h1 span {
     font-size: 14px;
 
     font-weight: 600;
-
 }
 
-
-
-/* Homem-Aranha pixel */
 
 .aranha-pixel {
 
@@ -343,28 +289,21 @@ h1 span {
 
     bottom: -90px;
 
-
     width: 320px;
 
     height: 320px;
 
-
     object-fit: contain;
 
-
     filter:
-
         drop-shadow(
             0 12px 12px rgba(0,0,0,.20)
         );
-
 }
 
 
 
-/* =========================
-   TEIA DECORATIVA
-========================= */
+/* TEIA */
 
 .linha-teia {
 
@@ -376,21 +315,12 @@ h1 span {
 
     letter-spacing: 7px;
 
-    margin:
-
-        3px
-
-        0
-
-        22px;
-
+    margin: 3px 0 22px;
 }
 
 
 
-/* =========================
-   CARDS
-========================= */
+/* CARDS */
 
 .objetivos {
 
@@ -399,7 +329,6 @@ h1 span {
     flex-direction: column;
 
     gap: 16px;
-
 }
 
 
@@ -414,23 +343,14 @@ details,
 
     overflow: hidden;
 
-
     box-shadow:
-
-        0 4px 12px rgba(
-            15,
-            67,
-            115,
-            .08
-        );
-
+        0 4px 12px rgba(15,67,115,.08);
 }
 
 
 details {
 
     transition: .25s;
-
 }
 
 
@@ -442,21 +362,12 @@ details:hover,
     transform: translateY(-2px);
 
     box-shadow:
-
-        0 8px 20px rgba(
-            15,
-            67,
-            115,
-            .18
-        );
-
+        0 8px 20px rgba(15,67,115,.18);
 }
 
 
 
-/* =========================
-   BOTÕES DOS CARDS
-========================= */
+/* BOTÕES */
 
 summary,
 .curriculo {
@@ -476,21 +387,18 @@ summary,
     list-style: none;
 
     text-decoration: none;
-
 }
 
 
 summary::-webkit-details-marker {
 
     display: none;
-
 }
 
 
 .titulo-card {
 
     flex: 1;
-
 }
 
 
@@ -502,7 +410,6 @@ summary strong,
     color: #164b83;
 
     font-size: 19px;
-
 }
 
 
@@ -516,7 +423,6 @@ summary small,
     font-size: 12px;
 
     margin-top: 2px;
-
 }
 
 
@@ -528,6 +434,7 @@ summary small,
 
     font-weight: 700;
 
+    transition: .25s;
 }
 
 
@@ -543,7 +450,6 @@ details[open] summary {
             #c9102e,
             #e92a43
         );
-
 }
 
 
@@ -551,7 +457,6 @@ details[open] summary strong,
 details[open] summary small {
 
     color: white;
-
 }
 
 
@@ -560,14 +465,11 @@ details[open] .abrir {
     color: white;
 
     transform: rotate(45deg);
-
 }
 
 
 
-/* =========================
-   ÍCONES
-========================= */
+/* ÍCONES */
 
 .icone {
 
@@ -586,7 +488,6 @@ details[open] .abrir {
     border-radius: 15px;
 
     font-size: 24px;
-
 }
 
 
@@ -595,7 +496,6 @@ details[open] .abrir {
     background: #ffe5e9;
 
     border: 2px solid #f5a6b2;
-
 }
 
 
@@ -604,14 +504,11 @@ details[open] .abrir {
     background: #dceeff;
 
     border: 2px solid #a9cff0;
-
 }
 
 
 
-/* =========================
-   CONTEÚDO
-========================= */
+/* CONTEÚDO */
 
 .conteudo {
 
@@ -624,7 +521,6 @@ details[open] .abrir {
     line-height: 1.7;
 
     overflow: hidden;
-
 }
 
 
@@ -637,7 +533,6 @@ details[open] .abrir {
     font-weight: 800;
 
     letter-spacing: 3px;
-
 }
 
 
@@ -647,14 +542,7 @@ details[open] .abrir {
 
     font-size: 25px;
 
-    margin:
-
-        2px
-
-        0
-
-        9px;
-
+    margin: 2px 0 9px;
 }
 
 
@@ -664,14 +552,7 @@ details[open] .abrir {
 
     font-size: 17px;
 
-    margin:
-
-        20px
-
-        0
-
-        8px;
-
+    margin: 20px 0 8px;
 }
 
 
@@ -680,54 +561,34 @@ details[open] .abrir {
     font-size: 14px;
 
     margin-bottom: 15px;
-
 }
 
 
 
-/* =========================
-   ITENS
-========================= */
+/* ITENS */
 
 .item {
 
-    border-top:
+    border-top: 1px solid #d3e5f2;
 
-        1px solid #d3e5f2;
-
-    padding:
-
-        15px
-
-        0;
-
+    padding: 15px 0;
 }
 
 
 .item h3 {
 
-    margin:
-
-        0
-
-        0
-
-        4px;
-
+    margin: 0 0 4px;
 }
 
 
 .item p {
 
     font-size: 13px;
-
 }
 
 
 
-/* =========================
-   DESTAQUES
-========================= */
+/* DESTAQUES */
 
 .destaque {
 
@@ -742,7 +603,6 @@ details[open] .abrir {
     font-weight: 700;
 
     font-size: 13px;
-
 }
 
 
@@ -750,12 +610,9 @@ details[open] .abrir {
 
     background: #ffe8eb;
 
-    border-left:
-
-        4px solid #d71936;
+    border-left: 4px solid #d71936;
 
     color: #a7132b;
-
 }
 
 
@@ -763,19 +620,14 @@ details[open] .abrir {
 
     background: #e1f2ff;
 
-    border-left:
-
-        4px solid #1764a8;
+    border-left: 4px solid #1764a8;
 
     color: #15518e;
-
 }
 
 
 
-/* =========================
-   IMAGENS DOS CARDS
-========================= */
+/* IMAGENS */
 
 .imagem-conteudo {
 
@@ -796,219 +648,495 @@ details[open] .abrir {
     border: 3px solid white;
 
     box-shadow:
+        0 8px 20px rgba(20,50,80,.20);
+}
 
-        0 8px 20px rgba(
-            20,
-            50,
-            80,
-            .20
+
+
+/* =====================================================
+   🕷️ FINANÇAS
+===================================================== */
+
+.financeiro-spider {
+
+    background:
+
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(215,25,54,.14),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 5% 90%,
+            rgba(23,81,142,.14),
+            transparent 30%
         );
 
+    position: relative;
+}
+
+
+.financeiro-spider::before {
+
+    content: "🕸️";
+
+    position: absolute;
+
+    right: -20px;
+
+    top: -15px;
+
+    font-size: 100px;
+
+    opacity: .07;
+
+    transform: rotate(20deg);
+
+    pointer-events: none;
+}
+
+
+.financeiro-spider::after {
+
+    content: "🕸️";
+
+    position: absolute;
+
+    left: -35px;
+
+    bottom: 120px;
+
+    font-size: 120px;
+
+    opacity: .05;
+
+    pointer-events: none;
 }
 
 
 
-/* =========================
-   FINANÇAS
-========================= */
+/* RENDA */
 
-.financeiro {
+.salario-card {
 
-    display: grid;
-
-    grid-template-columns:
-
-        1fr 1fr;
-
-    gap: 12px;
-
-    margin: 18px 0;
-
-}
-
-
-.financeiro div {
-
-    padding: 17px;
-
-    background: white;
-
-    border:
-
-        2px solid #cce4f6;
-
-    border-radius: 15px;
-
-}
-
-
-.financeiro small {
-
-    display: block;
-
-    color: #7892a7;
-
-    font-size: 9px;
-
-    font-weight: 800;
-
-    letter-spacing: 2px;
-
-}
-
-
-.financeiro strong {
-
-    display: block;
-
-    color: #15518e;
-
-    font-size: 22px;
-
-    margin-top: 5px;
-
-}
-
-
-
-/* gastos */
-
-.gastos {
-
-    background: white;
-
-    border:
-
-        2px solid #d3e7f6;
-
-    border-radius: 15px;
-
-    padding:
-
-        4px
-
-        16px;
-
-}
-
-
-.gastos p {
+    position: relative;
 
     display: flex;
 
-    justify-content: space-between;
+    align-items: center;
 
-    padding: 11px 0;
+    gap: 18px;
 
-    border-bottom:
+    margin: 22px 0;
 
-        1px solid #e2edf5;
-
-    font-size: 13px;
-
-}
-
-
-.gastos p:last-child {
-
-    border-bottom: 0;
-
-}
-
-
-.gastos b {
-
-    color: #15518e;
-
-}
-
-
-
-/* META CELULAR */
-
-.meta-celular {
-
-    margin-top: 18px;
-
-    padding: 18px;
-
-    border-radius: 17px;
+    padding: 22px;
 
     color: white;
 
+    overflow: hidden;
+
+    border-radius: 22px;
 
     background:
 
         linear-gradient(
             135deg,
-            #143e72,
-            #d71936
+            #d71936,
+            #a50924
         );
 
+    border: 4px solid #143e72;
 
     box-shadow:
 
-        0 8px 18px rgba(
-            30,
-            60,
-            100,
-            .18
-        );
+        0 8px 0 #143e72,
 
+        0 14px 25px rgba(0,0,0,.15);
 }
 
 
-.meta-celular > span {
+.salario-card::before {
+
+    content: "🕸️";
+
+    position: absolute;
+
+    right: -5px;
+
+    top: -25px;
+
+    font-size: 100px;
+
+    opacity: .15;
+}
+
+
+.aranha-moeda {
+
+    width: 65px;
+
+    height: 65px;
+
+    min-width: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #143e72;
+
+    border: 4px solid white;
+
+    font-size: 34px;
+
+    transform: rotate(-8deg);
+}
+
+
+.salario-card span {
+
+    display: block;
 
     font-size: 10px;
 
     font-weight: 800;
 
-    letter-spacing: 2px;
-
+    letter-spacing: 3px;
 }
 
 
-.meta-celular h3 {
+.salario-card strong {
+
+    display: block;
+
+    font-family: 'Bangers', cursive;
+
+    font-size: 38px;
+
+    letter-spacing: 1px;
+}
+
+
+.salario-card small {
+
+    opacity: .8;
+
+    font-size: 11px;
+}
+
+
+
+/* TEIA DE GASTOS */
+
+.gastos-spider {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+
+.gasto {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 14px;
+
+    background: white;
+
+    border: 2px solid #c8dff1;
+
+    border-radius: 17px;
+
+    transition: .2s;
+}
+
+
+.gasto:hover {
+
+    transform: translateX(6px);
+
+    border-color: #d71936;
+
+    box-shadow:
+        -5px 0 #d71936;
+}
+
+
+.gasto-icone {
+
+    width: 43px;
+
+    height: 43px;
+
+    min-width: 43px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #e5f1fc;
+
+    border-radius: 13px;
+
+    font-size: 21px;
+}
+
+
+.gasto div {
+
+    flex: 1;
+}
+
+
+.gasto strong {
+
+    display: block;
+
+    color: #174f85;
+
+    font-size: 13px;
+}
+
+
+.gasto small {
+
+    display: block;
+
+    color: #8ba0b0;
+
+    font-size: 10px;
+
+    margin-top: 2px;
+}
+
+
+.gasto b {
+
+    color: #d71936;
+
+    font-size: 15px;
+}
+
+
+
+/* META DO CELULAR */
+
+.spider-meta {
+
+    position: relative;
+
+    overflow: hidden;
+
+    margin-top: 25px;
+
+    padding: 25px;
 
     color: white;
 
-    margin:
+    background:
 
-        4px
+        linear-gradient(
+            135deg,
+            #071d42 0%,
+            #123e75 48%,
+            #c9102e 100%
+        );
 
-        0;
+    border: 4px solid #071d42;
 
+    border-radius: 18px;
+
+    box-shadow:
+
+        0 7px 0 #d71936,
+
+        0 15px 25px rgba(0,0,0,.20);
 }
 
 
-.meta-celular p {
+.teia-meta {
+
+    position: absolute;
+
+    right: -25px;
+
+    top: -45px;
+
+    font-size: 150px;
+
+    opacity: .13;
+
+    transform: rotate(20deg);
+}
+
+
+.spider-meta span {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.spider-meta h3 {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: white;
+
+    font-family: 'Bangers', cursive;
+
+    font-size: 29px;
+
+    letter-spacing: 1px;
+}
+
+
+.spider-meta p {
+
+    position: relative;
+
+    z-index: 2;
 
     font-size: 13px;
-
 }
 
 
-.meta-celular b {
+.meta-final {
 
-    color: #fff4a8;
+    position: relative;
 
+    z-index: 2;
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 10px 18px;
+
+    background: white;
+
+    color: #d71936;
+
+    border-radius: 30px;
+
+    font-family: 'Bangers', cursive;
+
+    font-size: 20px;
+
+    transform: rotate(-2deg);
 }
 
 
 
-/* =========================
-   PORTFÓLIO
-========================= */
+/* DINHEIRO RESTANTE */
+
+.sobra {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-top: 22px;
+
+    padding: 17px;
+
+    border-radius: 18px;
+
+    background: #e5f2ff;
+
+    border: 3px dashed #1761a4;
+}
+
+
+.sobra > span {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #d71936;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 22px;
+}
+
+
+.sobra div {
+
+    flex: 1;
+}
+
+
+.sobra strong {
+
+    display: block;
+
+    color: #164b83;
+
+    font-size: 14px;
+}
+
+
+.sobra small {
+
+    display: block;
+
+    color: #7892a7;
+
+    font-size: 10px;
+}
+
+
+.sobra > b {
+
+    color: #1761a4;
+
+    font-family: 'Bangers', cursive;
+
+    font-size: 25px;
+}
+
+
+
+/* PORTFÓLIO */
 
 .passos {
 
     margin-top: 15px;
 
-    border-top:
-
-        1px solid #d3e5f2;
-
+    border-top: 1px solid #d3e5f2;
 }
 
 
@@ -1016,12 +1144,9 @@ details[open] .abrir {
 
     padding: 12px 0;
 
-    border-bottom:
-
-        1px solid #d3e5f2;
+    border-bottom: 1px solid #d3e5f2;
 
     font-size: 13px;
-
 }
 
 
@@ -1030,14 +1155,11 @@ details[open] .abrir {
     color: #d71936;
 
     margin-right: 8px;
-
 }
 
 
 
-/* =========================
-   CURRÍCULO
-========================= */
+/* CURRÍCULO */
 
 .curriculo {
 
@@ -1051,9 +1173,7 @@ details[open] .abrir {
             #eef8ff
         );
 
-
     transition: .25s;
-
 }
 
 
@@ -1066,7 +1186,6 @@ details[open] .abrir {
             #d71936,
             #1761a4
         );
-
 }
 
 
@@ -1075,14 +1194,11 @@ details[open] .abrir {
 .curriculo:hover .abrir {
 
     color: white;
-
 }
 
 
 
-/* =========================
-   RODAPÉ
-========================= */
+/* RODAPÉ */
 
 footer {
 
@@ -1097,26 +1213,17 @@ footer {
     letter-spacing: 2px;
 
     margin-top: 25px;
-
 }
 
 
 
-/* =========================
-   CELULAR
-========================= */
+/* CELULAR */
 
 @media (max-width: 600px) {
 
-
     body {
 
-        padding:
-
-            18px
-
-            10px;
-
+        padding: 18px 10px;
     }
 
 
@@ -1129,20 +1236,14 @@ footer {
         height: 500px;
 
         opacity: .10;
-
     }
 
 
     .principal {
 
-        padding:
-
-            20px
-
-            15px;
+        padding: 20px 15px;
 
         border-radius: 24px;
-
     }
 
 
@@ -1150,28 +1251,19 @@ footer {
 
         min-height: 200px;
 
-        padding:
-
-            28px
-
-            8px
-
-            0;
-
+        padding: 28px 8px 0;
     }
 
 
     .hero-text {
 
         max-width: 68%;
-
     }
 
 
     h1 {
 
         font-size: 42px;
-
     }
 
 
@@ -1184,17 +1276,13 @@ footer {
         right: -35px;
 
         bottom: -55px;
-
     }
 
 
     summary,
     .curriculo {
 
-        padding:
-
-            12px;
-
+        padding: 12px;
     }
 
 
@@ -1202,7 +1290,6 @@ footer {
     .curriculo strong {
 
         font-size: 16px;
-
     }
 
 
@@ -1215,25 +1302,62 @@ footer {
         min-width: 44px;
 
         font-size: 20px;
-
     }
 
 
     .conteudo {
 
-        padding:
-
-            20px
-
-            17px;
-
+        padding: 20px 17px;
     }
 
 
-    .financeiro {
+    .financeiro-spider {
 
-        grid-template-columns: 1fr;
-
+        padding: 20px 15px;
     }
+
+
+    .salario-card {
+
+        padding: 17px;
+    }
+
+
+    .aranha-moeda {
+
+        width: 55px;
+
+        height: 55px;
+
+        min-width: 55px;
+
+        font-size: 27px;
+    }
+
+
+    .salario-card strong {
+
+        font-size: 31px;
+    }
+
+
+    .gasto {
+
+        padding: 10px;
+    }
+
+
+    .gasto b {
+
+        font-size: 13px;
+    }
+
+
+    .sobra {
+
+        flex-wrap: wrap;
+    }
+
+}
 
 }
